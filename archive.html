@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DJSTUDIO</title>
+        <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                position: relative; /* Position relative for the pseudo-element */
+            }
+        
+            body {
+                background-image: url("./cringr.png");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+        
+            body::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.9); /* Dark shadow color */
+                z-index: -1; /* Places the shadow behind the background image */
+                filter: blur(0px); /* Softens the shadow */
+            }
+
+            .up_header {
+            text-decoration: none; /* Removes the underline */
+            color: lightgray; /* Set color for link */
+            transition: transform 0.2s ease; /* Smooth transition for scaling */
+            display: inline-block; /* Important for scaling to work correctly */
+        }
+
+        .up_header:hover {
+            transform: scale(1.1); /* Scale the text slightly when hovered */
+        }
+        </style>
+        
+        
+    </head>
+    <body style="background-color: black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        
+        <div style="text-align: center;margin: 25px;font-size: 125%;">
+            <span style="padding: 20px;color: lightgray;"><a href="./index.html" class="up_header">Home</a></span>
+            <span style="padding: 20px;color: lightgray;"><a href="https://github.com/djopro-studios" class="up_header">GitHub</a></span>
+            <span style="padding: 20px;color: lightgray;"><a href="https://github.com/djopro-studios/DJ-APPSTORE" class="up_header">APPSTORE</a></span>
+            <span style="padding: 20px;color: lightgray;"><a href="./archive.html" class="up_header">Archives</a></span>
+            <span style="padding: 20px;color: lightgray;"><a href="https://discord.gg/3kMaFvk9VJ" class="up_header">Discord</a></span>
+        </div>
+        <br>
+        
+        <h1 style="text-align: center;font-size:250%;color: white;">DJSTUDIO Archives</h1>
+        <h1 id="modify_text" style="text-align: center;font-size:150%;color: white;font-weight: lighter;">All DJSTUDIO Old Version / Services</h1>
+        <br>
+        <div style="padding: 25px;display: grid;grid-template-columns: repeat(auto-fit, minmax(210px, 240px));grid-auto-rows: minmax(135px, auto);gap: 20px;">
+               
+               <div style="border-radius: 15px;background-color: rgba(255, 255, 255, 0.442);">
+                <a href="./archives/DJAPPSTORE_Web.html" style="color: inherit;text-decoration: inherit;">
+                <div style="width: fit-content;height: fit-content;padding: 10px;">
+                    <h1 style="text-align: center;">DJAPPSTORE</h1>
+                    <p><span style="color: lightgrey;">Type : </span>Website</p>
+                    <p><span style="color: lightgrey;">Creation Date: </span>12/03/2024</p>
+                    <p><span style="color: lightgrey;">End Date: </span>08/05/2024</p>
+                    <p><span style="color: lightgrey;">Last Version: </span>Unknow</p>
+                </div>
+                </a>
+               </div>
+
+               <div style="border-radius: 15px;background-color: rgba(255, 255, 255, 0.442);">
+                <a href="./archives/RobloxC++.html" style="color: inherit;text-decoration: inherit;">
+                <div style="width: fit-content;height: fit-content;padding: 10px;">
+                    <h1 style="text-align: center;">RobloxC++</h1>
+                    <p><span style="color: lightgrey;">Type : </span>Windows Software</p>
+                    <p><span style="color: lightgrey;">Creation Date: </span>14/07/2023</p>
+                    <p><span style="color: lightgrey;">End Date: </span>09/09/2024</p>
+                    <p><span style="color: lightgrey;">Last Version: </span>2.0.1.0</p>
+                </div>
+                </a>
+               </div>
+
+               <div style="border-radius: 15px;background-color: rgba(255, 255, 255, 0.442);">
+                <a href="./archives/Storage_Colaborator.html" style="color: inherit;text-decoration: inherit;">
+                <div style="width: fit-content;height: fit-content;padding: 10px;">
+                    <h1 style="text-align: center;">Storage Colab</h1>
+                    <p><span style="color: lightgrey;">Type : </span>Termux CLI</p>
+                    <p><span style="color: lightgrey;">Creation Date: </span>29/04/2024</p>
+                    <p><span style="color: lightgrey;">End Date: </span>Unknow</p>
+                    <p><span style="color: lightgrey;">Last Version: </span>Beta</p>
+                </div>
+                </a>
+               </div>
+
+        </div>
+
+        <footer style="padding: 20px;color: grey;text-align: center;">
+            Official DJSTUDIO Website | Made With ❤️ by DJOPRO_YT
+        </footer>
+        <!--<script>
+            function delay(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            const texts = [
+                "Welcome to the Official DJSTUDIO Website!",
+                "DJAPPSTORE is free to use!",
+                "😎 Free To Deploy in DJAPPSTORE 😎",
+                "100% 🇹🇳",
+                "Go check our Archives!",
+                "DJAPPSTORE by DJSTUDIO!",
+                "Join Our New Discord Server!",
+                "Welcome to our Website!"
+            ];
+
+            
+            async function animateTexts() {
+                const textLabel = document.getElementById("modify_text");
+
+                for (let text of texts) {
+                    await typeText(textLabel, text);
+                    await delay(4000); 
+                    await deleteText(textLabel);
+                }
+                
+                animateTexts();
+            }
+
+            
+            async function typeText(element, text) {
+                let value = "";
+                for (let i = 0; i < text.length; i++) {
+                    value += text[i] + "|";
+                    element.textContent = value; 
+                    await delay(50); 
+                    value = value.slice(0, -1); 
+                }
+                element.textContent = text + "|"; 
+            }
+
+            
+            async function deleteText(element) {
+                let text = element.textContent;
+                while (text.length > 1) {
+                    text = text.slice(0, -2) + "|"; 
+                    element.textContent = text;
+                    await delay(50); 
+                }
+            }
+
+            
+            animateTexts();
+        </script> -->
+    </body>
+</html>

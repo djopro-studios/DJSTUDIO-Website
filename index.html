@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DJSTUDIO</title>
+        <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                position: relative; /* Position relative for the pseudo-element */
+            }
+        
+            body {
+                background-image: url("./cringr.png");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+        
+            body::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 150%;
+                background: rgba(0, 0, 0, 0.9); /* Dark shadow color */
+                z-index: -1; /* Places the shadow behind the background image */
+                filter: blur(0px); /* Softens the shadow */
+            }
+
+            .up_header {
+            text-decoration: none; /* Removes the underline */
+            color: lightgray; /* Set color for link */
+            transition: transform 0.2s ease; /* Smooth transition for scaling */
+            display: inline-block; /* Important for scaling to work correctly */
+        }
+
+        .up_header:hover {
+            transform: scale(1.1); /* Scale the text slightly when hovered */
+        }
+        </style>
+        
+        
+    </head>
+    <body style="background-color: black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        
+        <div style="text-align: center;margin: 25px;font-size: 125%;">
+            <span style="padding: 20px;color: lightgray;"><a href="./index.html" class="up_header">Home</a></span>
+            <span style="padding: 20px;color: lightgray;"><a href="https://github.com/djopro-studios" class="up_header">GitHub</a></span>
+            <span style="padding: 20px;color: lightgray;"><a href="https://github.com/djopro-studios/DJ-APPSTORE" class="up_header">APPSTORE</a></span>
+            <span style="padding: 20px;color: lightgray;"><a href="./archive.html" class="up_header">Archives</a></span>
+            <span style="padding: 20px;color: lightgray;"><a href="https://discord.gg/3kMaFvk9VJ" class="up_header">Discord</a></span>
+        </div>
+        <br><br><br><br><br>
+        
+        <h1 style="text-align: center;font-size:500%;color: white;">DJSTUDIO</h1>
+        <h1 id="modify_text" style="text-align: center;font-size:200%;color: white;font-weight: lighter;">Our App|</h1>
+        <br><br><br><br><br><br><br><br>
+        <div style="background-color: rgba(128, 128, 128, 0.359);">
+            <br>
+            <h1 style="text-align: center;font-size:350%;color: white;">What is DJSTUDIO ?</h1>
+            <h1 style="text-align: center;font-size:200%;color: white;font-weight: lighter;padding: 50px;">DJOPRO STUDIO or DJSTUDIO is a team of developpers that provide services to the general public users like DJ APPSTORE , etc. And For Free !</h1>
+            <br>
+        </div>
+
+        <footer style="padding: 20px;color: grey;text-align: center;">
+            Official DJSTUDIO Website | Made With ❤️ by DJOPRO_YT
+        </footer>
+
+        <script>
+            function delay(time) {
+                return new Promise(resolve => setTimeout(resolve, time));
+            }
+
+            const texts = [
+                "Welcome to the Official DJSTUDIO Website!",
+                "DJAPPSTORE is free to use!",
+                "😎 Free To Deploy in DJAPPSTORE 😎",
+                "100% 🇹🇳",
+                "DJAPPSTORE, Don't break your dreams !",
+                "Go check our Archives!",
+                "We are since 2022 📅!",
+                "You can say DJSTUDIO or DJOPROSTUDIO, Its the same!",
+                "Same Same But Different! And still the same !",
+                "DJAPPSTORE by DJSTUDIO!",
+                "Join Our New Discord Server!",
+                "Welcome to our Website!"
+            ];
+
+            
+            async function animateTexts() {
+                const textLabel = document.getElementById("modify_text");
+
+                for (let text of texts) {
+                    await typeText(textLabel, text);
+                    await delay(4000); 
+                    await deleteText(textLabel);
+                }
+                
+                animateTexts();
+            }
+
+            
+            async function typeText(element, text) {
+                let value = "";
+                for (let i = 0; i < text.length; i++) {
+                    value += text[i] + "|";
+                    element.textContent = value; 
+                    await delay(50); 
+                    value = value.slice(0, -1); 
+                }
+                element.textContent = text + "|"; 
+            }
+
+            
+            async function deleteText(element) {
+                let text = element.textContent;
+                while (text.length > 1) {
+                    text = text.slice(0, -2) + "|"; 
+                    element.textContent = text;
+                    await delay(50); 
+                }
+            }
+
+            
+            animateTexts();
+        </script>
+    </body>
+</html>
