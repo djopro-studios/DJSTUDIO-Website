@@ -6,19 +6,18 @@
         <meta name="description" content="Welcome to the Official DJSTUDIO Website !">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:title" content="DJSTUDIO">
-
         <meta property="og:description" content="Welcome to the Official DJSTUDIO Website !">
         <meta property="og:image" content="./icon.png">
         <meta property="og:url" content="https://www.djstudio.work.gd/">
         <meta property="og:type" content="website">
-        
         <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+        
         <style>
             html, body {
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                position: relative; /* Position relative for the pseudo-element */
+                position: relative;
             }
         
             body {
@@ -36,47 +35,105 @@
                 left: 0;
                 width: 100%;
                 height: 150%;
-                background: rgba(0, 0, 0, 0.9); /* Dark shadow color */
-                z-index: -1; /* Places the shadow behind the background image */
-                filter: blur(0px); /* Softens the shadow */
+                background: rgba(0, 0, 0, 0.9);
+                z-index: -1;
+                filter: blur(0px);
             }
 
             .up_header {
-            text-decoration: none; /* Removes the underline */
-            color: lightgray; /* Set color for link */
-            transition: transform 0.2s ease; /* Smooth transition for scaling */
-            display: inline-block; /* Important for scaling to work correctly */
-        }
+                text-decoration: none;
+                color: lightgray;
+                transition: transform 0.2s ease;
+                display: inline-block;
+            }
 
-        .up_header:hover {
-            transform: scale(1.1); /* Scale the text slightly when hovered */
-        }
+            .up_header:hover {
+                transform: scale(1.1);
+            }
+
+            /* Médias Queries pour les mobiles */
+            @media (max-width: 768px) {
+                h1 {
+                    font-size: 180%;
+                }
+
+                #modify_text {
+                    font-size: 120%;
+                }
+
+                body {
+                    background-size: cover;
+                }
+
+                .up_header {
+                    font-size: 90%;
+                }
+
+                div {
+                    margin: 15px;
+                }
+
+                footer {
+                    font-size: 80%;
+                }
+
+                div[style*="text-align: center;margin: 25px;font-size: 125%;"] {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                span {
+                    margin-bottom: 10px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                h1 {
+                    font-size: 150%;
+                }
+
+                #modify_text {
+                    font-size: 100%;
+                }
+
+                div {
+                    padding: 10px;
+                }
+
+                footer {
+                    padding: 10px;
+                }
+
+                img {
+                    max-width: 90%;
+                    height: auto;
+                }
+            }
         </style>
-        
-        
     </head>
-    <body style="background-color: black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <body style="background-color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
         
-        <div style="text-align: center;margin: 25px;font-size: 125%;">
-            <span style="padding: 20px;color: lightgray;"><a href="./index.html" class="up_header">Home</a></span>
-            <span style="padding: 20px;color: lightgray;"><a href="https://github.com/djopro-studios" class="up_header">GitHub</a></span>
-            <span style="padding: 20px;color: lightgray;"><a href="https://github.com/djopro-studios/DJ-APPSTORE" class="up_header">APPSTORE</a></span>
-            <span style="padding: 20px;color: lightgray;"><a href="./archive.html" class="up_header">Archives</a></span>
-            <span style="padding: 20px;color: lightgray;"><a href="https://discord.gg/3kMaFvk9VJ" class="up_header">Discord</a></span>
+        <div style="text-align: center; margin: 25px; font-size: 125%;">
+            <span style="padding: 20px; color: lightgray;"><a href="./index.html" class="up_header">Home</a></span>
+            <span style="padding: 20px; color: lightgray;"><a href="https://github.com/djopro-studios" class="up_header">GitHub</a></span>
+            <span style="padding: 20px; color: lightgray;"><a href="https://github.com/djopro-studios/DJ-APPSTORE" class="up_header">APPSTORE</a></span>
+            <span style="padding: 20px; color: lightgray;"><a href="./archive.html" class="up_header">Archives</a></span>
+            <span style="padding: 20px; color: lightgray;"><a href="https://discord.gg/3kMaFvk9VJ" class="up_header">Discord</a></span>
         </div>
         <br><br><br><br><br>
         
-        <h1 style="text-align: center;font-size:500%;color: white;">DJSTUDIO</h1>
-        <h1 id="modify_text" style="text-align: center;font-size:200%;color: white;font-weight: lighter;">Our App|</h1>
+        <h1 style="text-align: center; font-size: 500%; color: white;">DJSTUDIO</h1>
+        <h1 id="modify_text" style="text-align: center; font-size: 200%; color: white; font-weight: lighter;">Our App|</h1>
         <br><br><br><br><br><br><br><br>
         <div style="background-color: rgba(128, 128, 128, 0.359);">
             <br>
-            <h1 style="text-align: center;font-size:350%;color: white;">What is DJSTUDIO ?</h1>
-            <h1 style="text-align: center;font-size:200%;color: white;font-weight: lighter;padding: 50px;">DJOPRO STUDIO or DJSTUDIO is a team of developpers that provide services to the general public users like DJ APPSTORE , etc. And For Free !</h1>
+            <h1 style="text-align: center; font-size: 350%; color: white;">What is DJSTUDIO?</h1>
+            <h1 style="text-align: center; font-size: 200%; color: white; font-weight: lighter; padding: 50px;">DJOPRO STUDIO or DJSTUDIO is a team of developers that provide services to the general public users like DJ APPSTORE, etc. And For Free!</h1>
             <br>
         </div>
 
-        <footer style="padding: 20px;color: grey;text-align: center;">
+        <footer style="padding: 20px; color: grey; text-align: center;">
             Official DJSTUDIO Website | Made With ❤️ by DJOPRO_YT
         </footer>
 
@@ -93,49 +150,45 @@
                 "DJAPPSTORE, Don't break your dreams !",
                 "Go check our Archives!",
                 "We are since 2022 📅!",
-                "You can say DJSTUDIO or DJOPROSTUDIO, Its the same!",
-                "Same Same But Different! And still the same !",
+                "You can say DJSTUDIO or DJOPROSTUDIO, It's the same!",
+                "Same Same But Different! And still the same!",
                 "DJAPPSTORE by DJSTUDIO!",
                 "Join Our New Discord Server!",
                 "Welcome to our Website!"
             ];
 
-            
             async function animateTexts() {
                 const textLabel = document.getElementById("modify_text");
 
                 for (let text of texts) {
                     await typeText(textLabel, text);
-                    await delay(4000); 
+                    await delay(4000);
                     await deleteText(textLabel);
                 }
-                
+
                 animateTexts();
             }
 
-            
             async function typeText(element, text) {
                 let value = "";
                 for (let i = 0; i < text.length; i++) {
                     value += text[i] + "|";
-                    element.textContent = value; 
-                    await delay(50); 
-                    value = value.slice(0, -1); 
+                    element.textContent = value;
+                    await delay(50);
+                    value = value.slice(0, -1);
                 }
-                element.textContent = text + "|"; 
+                element.textContent = text + "|";
             }
 
-            
             async function deleteText(element) {
                 let text = element.textContent;
                 while (text.length > 1) {
-                    text = text.slice(0, -2) + "|"; 
+                    text = text.slice(0, -2) + "|";
                     element.textContent = text;
-                    await delay(50); 
+                    await delay(50);
                 }
             }
 
-            
             animateTexts();
         </script>
     </body>
